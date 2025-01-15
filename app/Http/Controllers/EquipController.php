@@ -25,7 +25,7 @@ class EquipController extends Controller
     }
 
     public function create() {
-        $this->authorize('create');
+        //$this->authorize('create');
         $estadis = Estadi::all();
         return view('equips.create',compact('estadis'));
     }

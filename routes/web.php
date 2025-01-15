@@ -22,7 +22,7 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', RoleMiddleware::class.':administrador' ])->group(function (){
      Route::resource('/estadis', EstadisController::class)->except(['index', 'show']);
  });
-Route::resource('/equips', EquipController::class);
+Route::resource('/equips', EquipController::class) ;
 Route::resource('/estadis', EstadisController::class)->only(['index', 'show']);
 
 require __DIR__.'/auth.php';
